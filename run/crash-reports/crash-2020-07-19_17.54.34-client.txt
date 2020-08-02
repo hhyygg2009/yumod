@@ -1,0 +1,114 @@
+---- Minecraft Crash Report ----
+// Sorry :(
+
+Time: 7/19/20 5:54 PM
+Description: Initializing game
+
+net.minecraftforge.fml.relauncher.ReflectionHelper$UnknownConstructorException: Could not find constructor 'RockSpawnerEntity(World)' in class com.yu.yuplus.entity.RockSpawnerEntity
+	at net.minecraftforge.fml.relauncher.ReflectionHelper.findConstructor(ReflectionHelper.java:342)
+	at net.minecraftforge.fml.common.ObfuscationReflectionHelper.findConstructor(ObfuscationReflectionHelper.java:194)
+	at net.minecraftforge.fml.common.registry.EntityEntryBuilder$ConstructorFactory.<init>(EntityEntryBuilder.java:299)
+	at net.minecraftforge.fml.common.registry.EntityEntryBuilder$1.<init>(EntityEntryBuilder.java:267)
+	at net.minecraftforge.fml.common.registry.EntityEntryBuilder.build(EntityEntryBuilder.java:267)
+	at com.yu.yuplus.entity.EntityInitializer.onEntityRegistation(EntityInitializer.java:27)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_9_EntityInitializer_onEntityRegistation_Register.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus$1.invoke(EventBus.java:144)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.registries.GameData.fireRegistryEvents(GameData.java:859)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:628)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:252)
+	at net.minecraft.client.Minecraft.init(Minecraft.java:514)
+	at net.minecraft.client.Minecraft.run(Minecraft.java:422)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Client thread
+Stacktrace:
+	at net.minecraftforge.fml.relauncher.ReflectionHelper.findConstructor(ReflectionHelper.java:342)
+	at net.minecraftforge.fml.common.ObfuscationReflectionHelper.findConstructor(ObfuscationReflectionHelper.java:194)
+	at net.minecraftforge.fml.common.registry.EntityEntryBuilder$ConstructorFactory.<init>(EntityEntryBuilder.java:299)
+	at net.minecraftforge.fml.common.registry.EntityEntryBuilder$1.<init>(EntityEntryBuilder.java:267)
+	at net.minecraftforge.fml.common.registry.EntityEntryBuilder.build(EntityEntryBuilder.java:267)
+	at com.yu.yuplus.entity.EntityInitializer.onEntityRegistation(EntityInitializer.java:27)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler_9_EntityInitializer_onEntityRegistation_Register.invoke(.dynamic)
+	at net.minecraftforge.fml.common.eventhandler.ASMEventHandler.invoke(ASMEventHandler.java:90)
+	at net.minecraftforge.fml.common.eventhandler.EventBus$1.invoke(EventBus.java:144)
+	at net.minecraftforge.fml.common.eventhandler.EventBus.post(EventBus.java:182)
+	at net.minecraftforge.registries.GameData.fireRegistryEvents(GameData.java:859)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:628)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:252)
+	at net.minecraft.client.Minecraft.init(Minecraft.java:514)
+
+-- Initialization --
+Details:
+Stacktrace:
+	at net.minecraft.client.Minecraft.run(Minecraft.java:422)
+	at net.minecraft.client.main.Main.main(Main.java:118)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at net.minecraftforge.gradle.GradleStartCommon.launch(GradleStartCommon.java:97)
+	at GradleStart.main(GradleStart.java:25)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.12.2
+	Operating System: Linux (amd64) version 5.4.0-40-generic
+	Java Version: 1.8.0_231, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 238933840 bytes (227 MB) / 706740224 bytes (674 MB) up to 3736076288 bytes (3563 MB)
+	JVM Flags: 0 total; 
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.42 Powered by Forge 14.23.5.2836 5 mods loaded, 5 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+
+	| State | ID        | Version      | Source                           | Signature |
+	|:----- |:--------- |:------------ |:-------------------------------- |:--------- |
+	| LCH   | minecraft | 1.12.2       | minecraft.jar                    | None      |
+	| LCH   | mcp       | 9.42         | minecraft.jar                    | None      |
+	| LCH   | FML       | 8.0.99.99    | forgeSrc-1.12.2-14.23.5.2836.jar | None      |
+	| LCH   | forge     | 14.23.5.2836 | forgeSrc-1.12.2-14.23.5.2836.jar | None      |
+	| LCH   | yuplus    | 1.0          | bin                              | None      |
+
+	Loaded coremods (and transformers): 
+	GL info: ' Vendor: 'X.Org' Version: '4.6 (Compatibility Profile) Mesa 20.0.4' Renderer: 'Radeon RX 570 Series (POLARIS10, DRM 3.35.0, 5.4.0-40-generic, LLVM 9.0.1)'
+	Launched Version: 1.12.2
+	LWJGL: 2.9.4
+	OpenGL: Radeon RX 570 Series (POLARIS10, DRM 3.35.0, 5.4.0-40-generic, LLVM 9.0.1) GL version 4.6 (Compatibility Profile) Mesa 20.0.4, X.Org
+	GL Caps: Using GL 1.3 multitexturing.
+Using GL 1.3 texture combiners.
+Using framebuffer objects because OpenGL 3.0 is supported and separate blending is supported.
+Shaders are available because OpenGL 2.1 is supported.
+VBOs are available because OpenGL 1.5 is supported.
+
+	Using VBOs: Yes
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
+	Type: Client (map_client.txt)
+	Resource Packs: 
+	Current Language: English (US)
+	Profiler Position: N/A (disabled)
+	CPU: 12x AMD Ryzen 5 3600 6-Core Processor
