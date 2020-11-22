@@ -29,7 +29,7 @@ public class BlockInitializer {
 				.setCreativeTab(YuTab.getInstance())
 				.setTranslationKey(YuPlus.MODID+"."+"rockspawner")
 				);
-		GameRegistry.registerTileEntity(RockSpawnerEntity.class, new ResourceLocation(YuPlus.MODID,"rockspawnerentity"));
+//		GameRegistry.registerTileEntity(RockSpawnerEntity.class, new ResourceLocation(YuPlus.MODID,"rockspawnerentity"));
 		
 	}
 	

@@ -7,14 +7,14 @@ import net.minecraft.world.World;
 public abstract class EntityAIMoveToBlock extends EntityAIBase
 {
     private final EntityCreature creature;
-    private final double movementSpeed;
+    public final double movementSpeed;
     /** Controls task execution delay */
     protected int runDelay;
-    private int timeoutCounter;
+    public int timeoutCounter;
     private int maxStayTicks;
     /** Block to move to */
     protected BlockPos destinationBlock = BlockPos.ORIGIN;
-    private boolean isAboveDestination;
+    public boolean isAboveDestination;
     private final int searchLength;
 
     public EntityAIMoveToBlock(EntityCreature creature, double speedIn, int length)
@@ -92,7 +92,7 @@ public abstract class EntityAIMoveToBlock extends EntityAIBase
      * net.minecraft.entity.ai.EntityAIMoveToBlock#shouldMoveTo(World, BlockPos) EntityAIMoveToBlock#shouldMoveTo(World,
      * BlockPos)}) can be found.
      */
-    private boolean searchForDestination()
+    public boolean searchForDestination()
     {
         int i = this.searchLength;
         int j = 1;

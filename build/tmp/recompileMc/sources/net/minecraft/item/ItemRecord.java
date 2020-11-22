@@ -25,7 +25,7 @@ public class ItemRecord extends Item
 {
     private static final Map<SoundEvent, ItemRecord> RECORDS = Maps.<SoundEvent, ItemRecord>newHashMap();
     private final SoundEvent sound;
-    private final String displayName;
+    public final String displayName;
 
     protected ItemRecord(String recordName, SoundEvent soundIn)
     {

@@ -1,7 +1,11 @@
 package com.yu.yuplus.item;
 
+import com.yu.yuplus.YuPlus;
 import com.yu.yuplus.entity.LittleStoneEntity;
 
+import com.yu.yuplus.sound.ExtSound;
+import com.yu.yuplus.sound.ExtSoundManager;
+import net.minecraft.client.Minecraft;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.projectile.EntitySnowball;
 import net.minecraft.init.SoundEvents;
@@ -13,6 +17,11 @@ import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
 import net.minecraft.world.World;
 
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.URL;
+
 public class LittleStoneItem extends Item {
 
 	@Override
@@ -23,7 +32,13 @@ public class LittleStoneItem extends Item {
 			LittleStoneEntity littleStoneEntity=new LittleStoneEntity(worldIn,playerIn);
 			littleStoneEntity.shoot(playerIn, playerIn.rotationPitch, playerIn.rotationYaw, 0.0f, 1.5f, 1.0f);
 			worldIn.spawnEntity(littleStoneEntity);
+
+			ExtSoundManager e=ExtSoundManager.getInstance();
+			e.playUrl("http://127.0.0.1/cat.ogg");
 		}
+
+
+
 		itemStack.shrink(1);
 		return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStack);
 	}

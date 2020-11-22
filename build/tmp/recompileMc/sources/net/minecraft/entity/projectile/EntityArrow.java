@@ -52,7 +52,7 @@ public abstract class EntityArrow extends Entity implements IProjectile
     private int zTile;
     private Block inTile;
     private int inData;
-    protected boolean inGround;
+    public boolean inGround;
     protected int timeInGround;
     /** 1 if the player can pick up the arrow */
     public EntityArrow.PickupStatus pickupStatus;

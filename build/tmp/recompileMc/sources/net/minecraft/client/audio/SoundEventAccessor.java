@@ -13,7 +13,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class SoundEventAccessor implements ISoundEventAccessor<Sound>
 {
-    private final List<ISoundEventAccessor<Sound>> accessorList = Lists.<ISoundEventAccessor<Sound>>newArrayList();
+    public final List<ISoundEventAccessor<Sound>> accessorList = Lists.<ISoundEventAccessor<Sound>>newArrayList();
     private final Random rnd = new Random();
     private final ResourceLocation location;
     private final ITextComponent subtitle;
