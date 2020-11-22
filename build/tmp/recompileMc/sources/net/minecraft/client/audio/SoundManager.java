@@ -52,7 +52,7 @@ public class SoundManager
     /** Reference to the GameSettings object. */
     private final GameSettings options;
     /** A reference to the sound system. */
-    private SoundManager.SoundSystemStarterThread sndSystem;
+    public SoundManager.SoundSystemStarterThread sndSystem;
     /** Set to true when the SoundManager has been initialised. */
     private boolean loaded;
     /** A counter for how long the sound manager has been running */
@@ -612,7 +612,7 @@ public class SoundManager
     }
 
     @SideOnly(Side.CLIENT)
-    class SoundSystemStarterThread extends SoundSystem
+    public class SoundSystemStarterThread extends SoundSystem
     {
         private SoundSystemStarterThread()
         {

@@ -54,7 +54,7 @@ public class SoundHandler implements IResourceManagerReloadListener, ITickable
         }
     };
     private final SoundRegistry soundRegistry = new SoundRegistry();
-    private final SoundManager sndManager;
+    public final SoundManager sndManager;
     private final IResourceManager resourceManager;
 
     public SoundHandler(IResourceManager manager, GameSettings gameSettingsIn)

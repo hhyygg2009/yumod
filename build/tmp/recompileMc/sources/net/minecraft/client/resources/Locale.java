@@ -21,7 +21,7 @@ public class Locale
     /** Splits on "=" */
     private static final Splitter SPLITTER = Splitter.on('=').limit(2);
     private static final Pattern PATTERN = Pattern.compile("%(\\d+\\$)?[\\d\\.]*[df]");
-    Map<String, String> properties = Maps.<String, String>newHashMap();
+    public Map<String, String> properties = Maps.<String, String>newHashMap();
     private boolean unicode;
 
     /**
@@ -100,7 +100,7 @@ public class Locale
         }
     }
 
-    private void loadLocaleData(InputStream inputStreamIn) throws IOException
+    public void loadLocaleData(InputStream inputStreamIn) throws IOException
     {
         inputStreamIn = net.minecraftforge.fml.common.FMLCommonHandler.instance().loadLanguage(properties, inputStreamIn);
         if (inputStreamIn == null) return;

@@ -738,7 +738,7 @@ public abstract class GuiScreen extends Gui implements GuiYesNoCallback
         }
     }
 
-    private void openWebLink(URI url)
+    public void openWebLink(URI url)
     {
         try
         {

@@ -9,7 +9,7 @@ guiScale:0
 particles:0
 bobView:true
 anaglyph3d:false
-maxFps:120
+maxFps:260
 fboEnable:true
 difficulty:0
 fancyGraphics:true
@@ -18,7 +18,7 @@ renderClouds:true
 resourcePacks:[]
 incompatibleResourcePacks:[]
 lastServer:
-lang:en_us
+lang:zh_cn
 chatVisibility:0
 chatColors:true
 chatLinks:true
@@ -86,7 +86,7 @@ key_key.hotbar.7:8
 key_key.hotbar.8:9
 key_key.hotbar.9:10
 soundCategory_master:1.0
-soundCategory_music:0.0
+soundCategory_music:1.0
 soundCategory_record:1.0
 soundCategory_weather:1.0
 soundCategory_block:1.0

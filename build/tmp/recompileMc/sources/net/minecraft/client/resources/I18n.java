@@ -6,7 +6,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 @SideOnly(Side.CLIENT)
 public class I18n
 {
-    private static Locale i18nLocale;
+    public static Locale i18nLocale;
 
     static void setLocale(Locale i18nLocaleIn)
     {

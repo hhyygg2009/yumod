@@ -39,7 +39,7 @@ import net.minecraft.world.gen.structure.StructureBoundingBox;
 public class Template
 {
     /** blocks in the structure */
-    private final List<Template.BlockInfo> blocks = Lists.<Template.BlockInfo>newArrayList();
+    public final List<Template.BlockInfo> blocks = Lists.<Template.BlockInfo>newArrayList();
     /** entities in the structure */
     private final List<Template.EntityInfo> entities = Lists.<Template.EntityInfo>newArrayList();
     /** size of the structure */

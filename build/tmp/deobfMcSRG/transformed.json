@@ -4388,7 +4388,7 @@
         "start": "445"
       },
       {
-        "access": "20",
+        "access": "21",
         "inner_class": "net/minecraft/client/audio/SoundManager$SoundSystemStarterThread",
         "inner_name": "SoundSystemStarterThread",
         "outer_class": "net/minecraft/client/audio/SoundManager",
@@ -4458,7 +4458,7 @@
     },
     "innerClasses": [
       {
-        "access": "20",
+        "access": "21",
         "inner_class": "net/minecraft/client/audio/SoundManager$SoundSystemStarterThread",
         "inner_name": "SoundSystemStarterThread",
         "outer_class": "net/minecraft/client/audio/SoundManager",
