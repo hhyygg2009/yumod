@@ -38,6 +38,10 @@ public class ItemInitializer {
 	@SubscribeEvent
 	public static void onModelReg(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(ItemInitializer.littlestone, 0, new ModelResourceLocation(ItemInitializer.littlestone.getRegistryName(),"inventory"));
+
+		
+//		ModelResourceLocation m=new ModelResourceLocation(ItemInitializer.littlestone.getRegistryName(),"inventory");
+//		YuPlus.logger.info("111");
 	}
 	
 }
