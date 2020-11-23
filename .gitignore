@@ -1,5 +1,6 @@
 ## Based on GitHub's Eclipse .gitignore
 
+out/
 run/
 .gradle/
 build/

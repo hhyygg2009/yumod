@@ -1,9 +1,0 @@
-{
-  "ext.sound": {
-    "category": "record",
-    "subtitle": "subtitle.touhou_little_maid.item.portable_audio",
-    "sounds": [
-      "random/orb"
-    ]
-  }
-}
