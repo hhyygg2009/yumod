@@ -1,15 +1,19 @@
 package com.yu.yuplus.sound;
 
 import com.yu.yuplus.YuPlus;
+import com.yu.yuplus.sound.sound.ExtSound;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.audio.SoundManager;
 import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.util.math.BlockPos;
 
 public class ExtSoundManager {
-    private boolean IsSongPlaying;
+
+    private static boolean IsSongPlaying;
     private int index;
     private int nextTime;
     private int soundId;
+    public static String defaultSource="extsound";
 
 
     public static ExtSoundManager extSoundManager;
@@ -18,14 +22,7 @@ public class ExtSoundManager {
         return IsSongPlaying;
     }
 
-    //    单例
-    public static ExtSoundManager getInstance() {
-        if (extSoundManager==null){
-            extSoundManager= new ExtSoundManager();
-        }
-        return extSoundManager;
 
-    }
 
     private ExtSoundManager(){
         YuPlus.logger.info("starting "+getClass().getName());
@@ -36,7 +33,18 @@ public class ExtSoundManager {
 
         ExtSoundConfig extSoundConfig=new ExtSoundConfig();
         ExtSoundConfig.setup();
+
+
     }
+
+    public static ExtSoundManager getInstance() {
+        if (extSoundManager==null){
+            extSoundManager= new ExtSoundManager();
+        }
+        return extSoundManager;
+
+    }
+
 
     public BlockPos getLocation(){
         EntityPlayerSP sp=Minecraft.getMinecraft().player;
@@ -46,21 +54,19 @@ public class ExtSoundManager {
         return null;
     }
 
-    public void playUrl(String url){
-
-        YuPlus.logger.info("play1");
-//        URL realSongUrl= null;
-//        try {
-//            realSongUrl = new URL(url);
-//        } catch (  MalformedURLException e) {
-//            e.printStackTrace();
-//        }
-
-
+    public static void playUrl(String url){
         IsSongPlaying=true;
         ExtSound sound = new ExtSound(url);
-        Minecraft.getMinecraft().getSoundHandler().stopSounds();
+//        Minecraft.getMinecraft().getSoundHandler().stopSounds();
         Minecraft.getMinecraft().getSoundHandler().playSound(sound);
+    }
+
+    public static void pauseSound(){
+        ExtSoundConfig.getSoundManager().sndSystem.pause(defaultSource);
+    }
+
+    public static void playSound(){
+        ExtSoundConfig.getSoundManager().sndSystem.play(defaultSource);
     }
 
 

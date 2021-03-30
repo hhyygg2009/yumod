@@ -1,28 +1,17 @@
 package com.yu.yuplus;
 
 import com.yu.yuplus.proxy.CommonProxy;
-import net.minecraft.server.MinecraftServer;
+import com.yu.yuplus.sound.command.ExtSoundCommand;
 import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
+import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
 import org.apache.logging.log4j.Logger;
 
-import com.yu.yuplus.entity.EntityInitializer;
-
-import net.minecraft.client.audio.ISound;
-import net.minecraft.client.audio.SoundManager;
-import net.minecraft.init.Blocks;
-import net.minecraftforge.client.event.sound.SoundSetupEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.Mod.Instance;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import paulscode.sound.SoundSystemConfig;
-import paulscode.sound.SoundSystemException;
-import paulscode.sound.codecs.CodecWav;
-import net.minecraftforge.fml.common.asm.transformers.AccessTransformer;
-
 
 
 @Mod(modid = YuPlus.MODID, name = YuPlus.NAME, version = YuPlus.VERSION)
@@ -57,7 +46,11 @@ public class YuPlus
         proxy.postinit(event);
     }
 
-
+    @EventHandler
+    public static void registerCommands(FMLServerStartingEvent event){
+        YuPlus.logger.info("registercommand");
+        event.registerServerCommand(new ExtSoundCommand());
+    }
 
     
 

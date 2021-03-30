@@ -12,8 +12,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 version = "1.0"
-group = "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+group = "com.yu.yuplus" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "yuplus"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
@@ -31,7 +31,7 @@ minecraft {
     // simply re-run your setup task after changing the mappings to update your workspace.
     mappings = "stable_39"
     // makeObfSourceJar = false // an Srg named sources jar is made by default. uncomment this to disable.
-    
+
     
 }
 
@@ -82,4 +82,7 @@ processResources {
     }
 }
 
-sourceSets { main { output.resourcesDir = output.classesDir } }
+// Fix resources not loading in IDEA. There may be a better way to do this.
+sourceSets {
+    main { output.resourcesDir = output.classesDirs.first() }
+}
